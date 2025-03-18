@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -36,16 +35,16 @@ const Hero = () => {
             variants={itemVariants}
             className="inline-block px-3 py-1 text-xs font-medium bg-secondary text-secondary-foreground rounded-full uppercase tracking-wider"
           >
-            Minimalist Collection
+            Минималистичная коллекция
           </motion.span>
           
           <motion.h1
             variants={itemVariants}
             className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-2xl"
           >
-            Design that speaks{" "}
+            МИРЭА - это больше чем {" "}
             <span className="relative inline-block">
-              volumes
+              просто ВУЗ
               <span className="absolute inset-x-0 bottom-2 h-1 bg-black"></span>
             </span>
           </motion.h1>
@@ -54,13 +53,13 @@ const Hero = () => {
             variants={itemVariants}
             className="text-gray-600 text-lg max-w-md"
           >
-            Discover our collection of minimalist products designed to enhance your everyday life with elegance and simplicity.
+            Откройте для себя нашу коллекцию минималистичных товаров, созданных, чтобы привнести в вашу повседневную жизнь элегантность и простоту.
           </motion.p>
           
           <motion.div variants={itemVariants} className="pt-4">
             <Button asChild size="lg" className="group">
               <Link to="/shop">
-                Shop Collection{" "}
+                Перейти в магазин{" "}
                 <ArrowRight
                   size={18}
                   className="ml-2 transition-transform group-hover:translate-x-1"
@@ -79,15 +78,15 @@ const Hero = () => {
           <div className="relative aspect-square overflow-hidden">
             <img 
               src="https://images.unsplash.com/photo-1567225557594-88d73e55f2cb?q=80&w=1974&auto=format&fit=crop" 
-              alt="Minimalist design" 
+              alt="Минималистичный дизайн" 
               className="object-cover w-full h-full rounded-lg"
             />
           </div>
           
           <div className="absolute left-0 bottom-0 -ml-4 -mb-4 bg-white p-4 rounded-lg shadow-md max-w-[200px] transform translate-y-1/4 md:translate-y-0">
-            <p className="text-sm font-medium">Handcrafted with love</p>
+            <p className="text-sm font-medium">Создано с любовью</p>
             <p className="text-xs text-gray-500 mt-1">
-              Every product is made with attention to detail and quality
+              Каждый товар изготовлен с вниманием к деталям и качеству
             </p>
           </div>
         </motion.div>

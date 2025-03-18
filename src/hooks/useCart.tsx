@@ -64,8 +64,8 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     });
 
     toast({
-      title: "Added to cart",
-      description: `${product.name} has been added to your cart`,
+      title: "Добавлено в корзину",
+      description: `${product.name} в корзине`,
     });
   };
 
@@ -75,8 +75,8 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     );
     
     toast({
-      title: "Removed from cart",
-      description: "Item has been removed from your cart",
+      title: "Убран из корзины",
+      description: "Товар был убран из корзины",
     });
   };
 
@@ -96,8 +96,8 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   const clearCart = () => {
     setItems([]);
     toast({
-      title: "Cart cleared",
-      description: "All items have been removed from your cart",
+      title: "Корзина очищена",
+      description: "Все товары были убраны из корзины",
     });
   };
 

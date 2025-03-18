@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { CartItem as CartItemType } from "@/lib/types";
@@ -15,6 +14,10 @@ const CartItem = ({ item }: CartItemProps) => {
   const { product, quantity } = item;
   const { updateQuantity, removeItem } = useCart();
   const [isImageLoaded, setIsImageLoaded] = useState(false);
+
+  // Конвертация цен в рубли
+  const priceInRubles = (product.price * 90).toFixed(0);
+  const totalPriceInRubles = (product.price * quantity * 90).toFixed(0);
 
   return (
     <motion.div
@@ -56,7 +59,7 @@ const CartItem = ({ item }: CartItemProps) => {
           </Button>
         </div>
         
-        <p className="text-sm text-gray-500 mt-1">${product.price.toFixed(2)}</p>
+        <p className="text-sm text-gray-500 mt-1">{priceInRubles} ₽</p>
         
         <div className="flex items-center justify-between mt-3">
           <div className="flex items-center space-x-2 border border-gray-200 rounded-md overflow-hidden">
@@ -81,7 +84,7 @@ const CartItem = ({ item }: CartItemProps) => {
           </div>
           
           <p className="text-sm font-medium">
-            ${(product.price * quantity).toFixed(2)}
+            {totalPriceInRubles} ₽
           </p>
         </div>
       </div>

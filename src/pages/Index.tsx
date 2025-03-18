@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useProducts } from "@/hooks/useProducts";
@@ -26,13 +25,13 @@ const Index = () => {
       <section className="mt-20">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8">
           <div>
-            <h2 className="text-2xl font-semibold">Featured Products</h2>
-            <p className="text-gray-500 mt-2">Discover our most popular items</p>
+            <h2 className="text-2xl font-semibold">Популярные товары</h2>
+            <p className="text-gray-500 mt-2">Откройте для себя наши самые популярные позиции</p>
           </div>
           
           <Button asChild variant="ghost" className="mt-4 md:mt-0">
             <Link to="/shop" className="group flex items-center">
-              View All{" "}
+              Смотреть все{" "}
               <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
             </Link>
           </Button>
@@ -58,11 +57,11 @@ const Index = () => {
           style={{ opacity: textOpacity, y: textY }}
           className="max-w-lg mx-auto text-center relative z-10"
         >
-          <h2 className="text-3xl font-semibold mb-4">Our Design Philosophy</h2>
+          <h2 className="text-3xl font-semibold mb-4">Наша философия дизайна</h2>
           <p className="text-gray-600 mb-8">
-            We believe in the power of minimalism - creating products that are both beautiful and functional, 
-            without unnecessary elements. Every piece in our collection is thoughtfully designed to enhance 
-            your everyday experiences.
+            Мы верим в силу минимализма - создаем продукты, которые одновременно красивы и функциональны, 
+            без лишних элементов. Каждый предмет в нашей коллекции тщательно продуман, чтобы улучшить 
+            ваш повседневный опыт.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             <motion.div
@@ -75,9 +74,9 @@ const Index = () => {
               <div className="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="font-medium">01</span>
               </div>
-              <h3 className="font-medium mb-2">Simplicity</h3>
+              <h3 className="font-medium mb-2">Простота</h3>
               <p className="text-sm text-gray-500">
-                Clean lines and uncluttered designs that speak for themselves.
+                Чистые линии и ненагруженный дизайн, который говорит сам за себя.
               </p>
             </motion.div>
             
@@ -91,9 +90,9 @@ const Index = () => {
               <div className="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="font-medium">02</span>
               </div>
-              <h3 className="font-medium mb-2">Functionality</h3>
+              <h3 className="font-medium mb-2">Функциональность</h3>
               <p className="text-sm text-gray-500">
-                Products that are practical and enhance your daily routines.
+                Продукты, которые практичны и улучшают вашу повседневную жизнь.
               </p>
             </motion.div>
             
@@ -107,9 +106,9 @@ const Index = () => {
               <div className="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="font-medium">03</span>
               </div>
-              <h3 className="font-medium mb-2">Quality</h3>
+              <h3 className="font-medium mb-2">Качество</h3>
               <p className="text-sm text-gray-500">
-                Crafted with premium materials for longevity and durability.
+                Изготовлено из премиальных материалов для длительной службы и прочности.
               </p>
             </motion.div>
           </div>
@@ -127,7 +126,7 @@ const Index = () => {
               viewport={{ once: true }}
               className="text-3xl md:text-4xl font-bold mb-4"
             >
-              Ready to elevate your space?
+              Готовы улучшить ваше пространство?
             </motion.h2>
             
             <motion.p
@@ -137,7 +136,7 @@ const Index = () => {
               viewport={{ once: true }}
               className="text-gray-300 mb-8"
             >
-              Explore our collection and discover the perfect additions to your home.
+              Изучите нашу коллекцию и найдите идеальные дополнения для вашего дома.
             </motion.p>
             
             <motion.div
@@ -148,7 +147,7 @@ const Index = () => {
             >
               <Button asChild size="lg" variant="outline" className="bg-transparent text-white hover:bg-white hover:text-black">
                 <Link to="/shop">
-                  Shop Now
+                  Перейти в магазин
                 </Link>
               </Button>
             </motion.div>

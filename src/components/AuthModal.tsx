@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -69,7 +68,7 @@ const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle className="text-center text-xl">
-            {activeTab === "login" ? "Sign In" : "Create an Account"}
+            {activeTab === "login" ? "Вход в аккаунт" : "Создание аккаунта"}
           </DialogTitle>
         </DialogHeader>
         <Tabs
@@ -79,8 +78,8 @@ const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
           className="w-full"
         >
           <TabsList className="grid w-full grid-cols-2 mb-4">
-            <TabsTrigger value="login">Login</TabsTrigger>
-            <TabsTrigger value="register">Register</TabsTrigger>
+            <TabsTrigger value="login">Вход</TabsTrigger>
+            <TabsTrigger value="register">Регистрация</TabsTrigger>
           </TabsList>
 
           <TabsContent value="login">
@@ -90,14 +89,14 @@ const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
                 <Input
                   id="email"
                   type="email"
-                  placeholder="your@email.com"
+                  placeholder="ваш@email.com"
                   value={loginEmail}
                   onChange={(e) => setLoginEmail(e.target.value)}
                   required
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="password">Password</Label>
+                <Label htmlFor="password">Пароль</Label>
                 <Input
                   id="password"
                   type="password"
@@ -108,12 +107,12 @@ const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
                 />
               </div>
               <Button type="submit" className="w-full" disabled={isLoading}>
-                {isLoading ? "Logging in..." : "Login"}
+                {isLoading ? "Выполняется вход..." : "Войти"}
               </Button>
               
               <div className="text-center mt-4">
                 <p className="text-sm text-gray-500">
-                  Demo account:{" "}
+                  Демо-аккаунт:{" "}
                   <button
                     type="button"
                     className="text-black underline"
@@ -122,7 +121,7 @@ const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
                       setLoginPassword("password123");
                     }}
                   >
-                    Use demo credentials
+                    Использовать демо-данные
                   </button>
                 </p>
               </div>
@@ -132,10 +131,10 @@ const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
           <TabsContent value="register">
             <form onSubmit={handleRegister} className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="name">Full Name</Label>
+                <Label htmlFor="name">Полное имя</Label>
                 <Input
                   id="name"
-                  placeholder="John Doe"
+                  placeholder="Иван Иванов"
                   value={registerName}
                   onChange={(e) => setRegisterName(e.target.value)}
                   required
@@ -146,14 +145,14 @@ const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
                 <Input
                   id="register-email"
                   type="email"
-                  placeholder="your@email.com"
+                  placeholder="ваш@email.com"
                   value={registerEmail}
                   onChange={(e) => setRegisterEmail(e.target.value)}
                   required
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="register-password">Password</Label>
+                <Label htmlFor="register-password">Пароль</Label>
                 <Input
                   id="register-password"
                   type="password"
@@ -164,7 +163,7 @@ const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
                 />
               </div>
               <Button type="submit" className="w-full" disabled={isLoading}>
-                {isLoading ? "Creating account..." : "Create Account"}
+                {isLoading ? "Создание аккаунта..." : "Создать аккаунт"}
               </Button>
             </form>
           </TabsContent>

@@ -91,8 +91,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     localStorage.setItem("user", JSON.stringify(newUser));
     
     toast({
-      title: "Success",
-      description: "Your account has been created",
+      title: "Успех",
+      description: "Ваш аккаунт был создан",
     });
     return true;
   };
@@ -102,8 +102,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     setIsAuthenticated(false);
     localStorage.removeItem("user");
     toast({
-      title: "Logged out",
-      description: "You have been logged out successfully",
+      title: "Выйти",
+      description: "Вы успешно вышли из системы",
     });
   };
 

@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Product, Review } from "@/lib/types";
 import { useAuth } from "@/hooks/useAuth";
@@ -26,8 +25,8 @@ const Reviews = ({ product }: ReviewsProps) => {
     
     if (!comment.trim()) {
       toast({
-        title: "Error",
-        description: "Please enter a comment",
+        title: "Ошибка",
+        description: "Пожалуйста, введите комментарий",
         variant: "destructive",
       });
       return;
@@ -62,8 +61,8 @@ const Reviews = ({ product }: ReviewsProps) => {
       setIsSubmitting(false);
       
       toast({
-        title: "Review submitted",
-        description: "Thank you for your feedback!",
+        title: "Отзыв отправлен",
+        description: "Спасибо за ваш отзыв!",
       });
     }, 1000);
   };
@@ -71,10 +70,10 @@ const Reviews = ({ product }: ReviewsProps) => {
   return (
     <div className="mt-12">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-xl font-semibold">Reviews</h2>
+        <h2 className="text-xl font-semibold">Отзывы</h2>
         {isAuthenticated && !showForm && (
           <Button variant="outline" onClick={() => setShowForm(true)}>
-            Write a Review
+            Написать отзыв
           </Button>
         )}
       </div>
@@ -91,7 +90,7 @@ const Reviews = ({ product }: ReviewsProps) => {
               <form onSubmit={handleSubmit}>
                 <div className="mb-4">
                   <label className="block text-sm font-medium mb-2">
-                    Your Rating
+                    Ваша оценка
                   </label>
                   <div className="flex items-center">
                     {[1, 2, 3, 4, 5].map((star) => (
@@ -117,27 +116,27 @@ const Reviews = ({ product }: ReviewsProps) => {
                     htmlFor="comment"
                     className="block text-sm font-medium mb-2"
                   >
-                    Your Review
+                    Ваш отзыв
                   </label>
                   <Textarea
                     id="comment"
                     value={comment}
                     onChange={(e) => setComment(e.target.value)}
-                    placeholder="Write your review here..."
+                    placeholder="Напишите свой отзыв здесь..."
                     className="min-h-[100px]"
                   />
                 </div>
 
                 <div className="flex space-x-2">
                   <Button type="submit" disabled={isSubmitting}>
-                    {isSubmitting ? "Submitting..." : "Submit Review"}
+                    {isSubmitting ? "Отправка..." : "Отправить отзыв"}
                   </Button>
                   <Button
                     type="button"
                     variant="outline"
                     onClick={() => setShowForm(false)}
                   >
-                    Cancel
+                    Отмена
                   </Button>
                 </div>
               </form>
@@ -150,14 +149,14 @@ const Reviews = ({ product }: ReviewsProps) => {
         <div className="flex items-start space-x-3 p-4 bg-gray-50 rounded-lg mb-6">
           <AlertCircle size={20} className="text-gray-400 mt-0.5" />
           <div className="text-sm">
-            <p>You need to be logged in to write a review.</p>
+            <p>Чтобы написать отзыв, необходимо войти в систему.</p>
           </div>
         </div>
       )}
 
       {reviews.length === 0 ? (
         <div className="text-center py-8">
-          <p className="text-gray-500">No reviews yet. Be the first to leave a review!</p>
+          <p className="text-gray-500">Пока нет отзывов. Будьте первым, кто оставит отзыв!</p>
         </div>
       ) : (
         <div className="space-y-6">

@@ -1,30 +1,29 @@
-
 import { Product, User } from './types';
 
 export const products: Product[] = [
   {
     id: 1,
-    name: "Minimal Ceramic Vase",
-    description: "A sleek, handcrafted ceramic vase perfect for modern interiors. Each piece is uniquely crafted by artisans with attention to detail and quality.",
+    name: "Минималистичная керамическая ваза",
+    description: "Изящная керамическая ваза ручной работы, идеальная для современных интерьеров. Каждое изделие уникально и создано мастерами с вниманием к деталям и качеству.",
     price: 49.99,
-    category: "Home Decor",
+    category: "Декор",
     image: "https://images.unsplash.com/photo-1612546958050-82eb14315bde?q=80&w=1287&auto=format&fit=crop",
     rating: 4.8,
     reviews: [
       {
         id: 1,
         userId: 2,
-        userName: "Sofia Chen",
+        userName: "София Чен",
         rating: 5,
-        comment: "Absolutely beautiful! The craftsmanship is exceptional.",
+        comment: "Просто великолепно! Исключительное качество исполнения.",
         date: "2023-04-12"
       },
       {
         id: 2,
         userId: 3,
-        userName: "Marcus Kim",
+        userName: "Марк Ким",
         rating: 4.5,
-        comment: "Elegant design, just as pictured. Very happy with my purchase.",
+        comment: "Элегантный дизайн, именно как на фото. Очень доволен покупкой.",
         date: "2023-03-30"
       }
     ],
@@ -32,19 +31,19 @@ export const products: Product[] = [
   },
   {
     id: 2,
-    name: "Minimalist Desk Lamp",
-    description: "An elegant desk lamp with adjustable brightness and a sleek design that complements any workspace. Energy-efficient LED with long lifespan.",
+    name: "Минималистичная настольная лампа",
+    description: "Элегантная настольная лампа с регулируемой яркостью и стильным дизайном, который дополнит любое рабочее пространство. Энергоэффективный светодиод с долгим сроком службы.",
     price: 89.99,
-    category: "Lighting",
+    category: "Освещение",
     image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?q=80&w=1287&auto=format&fit=crop",
     rating: 4.6,
     reviews: [
       {
         id: 3,
         userId: 1,
-        userName: "Alex Johnson",
+        userName: "Алекс Джонсон",
         rating: 4,
-        comment: "Great lamp! Clean design and functional.",
+        comment: "Отличная лампа! Чистый дизайн и функциональность.",
         date: "2023-05-02"
       }
     ],
@@ -52,27 +51,27 @@ export const products: Product[] = [
   },
   {
     id: 3,
-    name: "Premium Leather Wallet",
-    description: "Handcrafted from full-grain leather, this minimalist wallet offers durability and sophistication. Features multiple card slots and a sleek profile.",
+    name: "Премиальный кожаный бумажник",
+    description: "Изготовлен вручную из кожи высшего качества, этот минималистичный бумажник сочетает в себе прочность и изысканность. Имеет несколько отделений для карт и тонкий профиль.",
     price: 59.99,
-    category: "Accessories",
+    category: "Аксессуары",
     image: "https://images.unsplash.com/photo-1627123424574-724758594e93?q=80&w=1287&auto=format&fit=crop",
     rating: 4.9,
     reviews: [
       {
         id: 4,
         userId: 4,
-        userName: "Emma Wilson",
+        userName: "Эмма Уилсон",
         rating: 5,
-        comment: "The quality of the leather is exceptional. Worth every penny!",
+        comment: "Качество кожи исключительное. Стоит каждой копейки!",
         date: "2023-02-18"
       },
       {
         id: 5,
         userId: 5,
-        userName: "David Lee",
+        userName: "Давид Ли",
         rating: 4.8,
-        comment: "Sleek, minimal and functional. Exactly what I was looking for.",
+        comment: "Стильный, минималистичный и функциональный. Именно то, что я искал.",
         date: "2023-01-30"
       }
     ],
@@ -80,19 +79,19 @@ export const products: Product[] = [
   },
   {
     id: 4,
-    name: "Wireless Headphones",
-    description: "Premium noise-cancelling headphones with crystal clear sound quality and extended battery life. Comfortable design for all-day wear.",
+    name: "Беспроводные наушники",
+    description: "Премиальные наушники с шумоподавлением, кристально чистым качеством звука и долгим временем работы. Удобная конструкция для ношения в течение всего дня.",
     price: 199.99,
-    category: "Electronics",
+    category: "Электроника",
     image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1287&auto=format&fit=crop",
     rating: 4.7,
     reviews: [
       {
         id: 6,
         userId: 6,
-        userName: "Michael Brown",
+        userName: "Михаил Браун",
         rating: 4.5,
-        comment: "Sound quality is incredible. Battery lasts as advertised.",
+        comment: "Качество звука невероятное. Батарея держит заявленное время.",
         date: "2023-03-15"
       }
     ],
@@ -100,19 +99,19 @@ export const products: Product[] = [
   },
   {
     id: 5,
-    name: "Marble Coffee Table",
-    description: "A striking coffee table with a genuine marble top and black steel legs. The perfect centerpiece for your living space.",
+    name: "Мраморный журнальный столик",
+    description: "Эффектный журнальный столик с настоящей мраморной столешницей и черными стальными ножками. Идеальный центральный элемент для вашей гостиной.",
     price: 349.99,
-    category: "Furniture",
+    category: "Мебель",
     image: "https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?q=80&w=1169&auto=format&fit=crop",
     rating: 4.5,
     reviews: [
       {
         id: 7,
         userId: 7,
-        userName: "Jennifer Taylor",
+        userName: "Дженнифер Тейлор",
         rating: 4.5,
-        comment: "Absolutely gorgeous table. The marble is stunning in person.",
+        comment: "Просто великолепный стол. Мрамор выглядит потрясающе вживую.",
         date: "2023-04-05"
       }
     ],
@@ -120,19 +119,19 @@ export const products: Product[] = [
   },
   {
     id: 6,
-    name: "Minimal Wall Clock",
-    description: "A sleek, minimalist wall clock with a clean design and silent movement. Perfect for any room in your home or office.",
+    name: "Минималистичные настенные часы",
+    description: "Стильные минималистичные настенные часы с чистым дизайном и бесшумным механизмом. Подходят для любой комнаты в доме или офисе.",
     price: 39.99,
-    category: "Home Decor",
+    category: "Декор",
     image: "https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?q=80&w=1170&auto=format&fit=crop",
     rating: 4.2,
     reviews: [
       {
         id: 8,
         userId: 8,
-        userName: "Thomas Garcia",
+        userName: "Томас Гарсия",
         rating: 4,
-        comment: "Simple and elegant. Exactly as pictured.",
+        comment: "Просто и элегантно. Точно как на фото.",
         date: "2023-02-28"
       }
     ],
@@ -140,19 +139,19 @@ export const products: Product[] = [
   },
   {
     id: 7,
-    name: "Ceramic Mug Set",
-    description: "Set of 4 handcrafted ceramic mugs in minimalist design. Each mug is unique with subtle variations in glaze and texture.",
+    name: "Набор керамических кружек",
+    description: "Набор из 4 керамических кружек ручной работы в минималистичном дизайне. Каждая кружка уникальна с небольшими вариациями глазури и текстуры.",
     price: 49.99,
-    category: "Kitchen",
+    category: "Кухня",
     image: "https://images.unsplash.com/photo-1577037834093-222dae8210e9?q=80&w=1170&auto=format&fit=crop",
     rating: 4.6,
     reviews: [
       {
         id: 9,
         userId: 9,
-        userName: "Sarah Miller",
+        userName: "Сара Миллер",
         rating: 5,
-        comment: "These mugs are perfect - stylish, comfortable to hold, and great quality.",
+        comment: "Эти кружки идеальны - стильные, удобные в руке и отличного качества.",
         date: "2023-05-10"
       }
     ],
@@ -160,19 +159,19 @@ export const products: Product[] = [
   },
   {
     id: 8,
-    name: "Smart Watch",
-    description: "Sleek, minimalist smartwatch with health tracking, notifications, and customizable faces. Water-resistant and long battery life.",
+    name: "Умные часы",
+    description: "Стильные минималистичные смарт-часы с отслеживанием здоровья, уведомлениями и настраиваемыми циферблатами. Водонепроницаемые и с длительным сроком службы батареи.",
     price: 199.99,
-    category: "Electronics",
+    category: "Электроника",
     image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1399&auto=format&fit=crop",
     rating: 4.4,
     reviews: [
       {
         id: 10,
         userId: 10,
-        userName: "Ryan Johnson",
+        userName: "Райан Джонсон",
         rating: 4.2,
-        comment: "Great design and functionality. Battery life could be better.",
+        comment: "Отличный дизайн и функциональность. Время работы батареи могло бы быть лучше.",
         date: "2023-03-22"
       }
     ],
@@ -183,26 +182,26 @@ export const products: Product[] = [
 export const users: User[] = [
   {
     id: 1,
-    name: "Alex Johnson",
+    name: "Алекс Джонсон",
     email: "alex@example.com",
     password: "password123"
   },
   {
     id: 2,
-    name: "Sofia Chen",
+    name: "София Чен",
     email: "sofia@example.com",
     password: "password123"
   }
 ];
 
 export const categories: string[] = [
-  "All",
-  "Home Decor",
-  "Lighting",
-  "Accessories",
-  "Electronics",
-  "Furniture",
-  "Kitchen"
+  "Все",
+  "Декор",
+  "Освещение",
+  "Аксессуары",
+  "Электроника",
+  "Мебель",
+  "Кухня"
 ];
 
 export function getProductById(id: number): Product | undefined {
@@ -210,7 +209,7 @@ export function getProductById(id: number): Product | undefined {
 }
 
 export function getProductsByCategory(category: string): Product[] {
-  if (category === "All") return products;
+  if (category === "Все") return products;
   return products.filter(product => product.category === category);
 }
 
@@ -221,33 +220,56 @@ export function getProductsByFilters(filters: {
   inStock?: boolean;
   sortBy?: string;
 }): Product[] {
+  console.log('data.getProductsByFilters - started with filters:', filters);
+  console.log('data.getProductsByFilters - all products:', products.length);
+  
   let filteredProducts = [...products];
+  let count = 0;
 
-  if (filters.category && filters.category !== "All") {
+  // Фильтрация по категории
+  if (filters.category && filters.category !== "Все") {
+    console.log('data.getProductsByFilters - filtering by category:', filters.category);
     filteredProducts = filteredProducts.filter(
       product => product.category === filters.category
     );
+    console.log('data.getProductsByFilters - after category filter:', filteredProducts.length);
+    count++;
   }
 
+  // Фильтрация по минимальной цене
   if (filters.minPrice !== undefined) {
+    console.log('data.getProductsByFilters - filtering by min price:', filters.minPrice);
     filteredProducts = filteredProducts.filter(
       product => product.price >= filters.minPrice!
     );
+    console.log('data.getProductsByFilters - after min price filter:', filteredProducts.length);
+    count++;
   }
 
+  // Фильтрация по максимальной цене
   if (filters.maxPrice !== undefined) {
+    console.log('data.getProductsByFilters - filtering by max price:', filters.maxPrice);
+    console.log('data.getProductsByFilters - product prices:', filteredProducts.map(p => p.price));
     filteredProducts = filteredProducts.filter(
       product => product.price <= filters.maxPrice!
     );
+    console.log('data.getProductsByFilters - after max price filter:', filteredProducts.length);
+    count++;
   }
 
-  if (filters.inStock !== undefined) {
+  // Фильтрация по наличию
+  if (filters.inStock === true) { // Только если true, а не undefined или false
+    console.log('data.getProductsByFilters - filtering by in stock');
     filteredProducts = filteredProducts.filter(
-      product => product.inStock === filters.inStock
+      product => product.inStock === true
     );
+    console.log('data.getProductsByFilters - after stock filter:', filteredProducts.length);
+    count++;
   }
 
+  // Сортировка
   if (filters.sortBy) {
+    console.log('data.getProductsByFilters - sorting by:', filters.sortBy);
     switch (filters.sortBy) {
       case "price-asc":
         filteredProducts.sort((a, b) => a.price - b.price);
@@ -263,5 +285,6 @@ export function getProductsByFilters(filters: {
     }
   }
 
+  console.log(`data.getProductsByFilters - finished: applied ${count} filters, returned ${filteredProducts.length} products`);
   return filteredProducts;
 }

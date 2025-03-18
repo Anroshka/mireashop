@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useProducts } from "@/hooks/useProducts";
@@ -40,11 +39,11 @@ const ProductDetail = () => {
   if (!product) {
     return (
       <div className="flex flex-col items-center justify-center py-12">
-        <h1 className="text-2xl font-semibold mb-4">Product Not Found</h1>
+        <h1 className="text-2xl font-semibold mb-4">Товар не найден</h1>
         <p className="text-gray-500 mb-6">
-          The product you are looking for does not exist.
+          Товар, который вы ищете, не существует.
         </p>
-        <Button onClick={() => navigate("/shop")}>Back to Shop</Button>
+        <Button onClick={() => navigate("/shop")}>Вернуться в магазин</Button>
       </div>
     );
   }
@@ -68,6 +67,9 @@ const ProductDetail = () => {
     }, 1500);
   };
   
+  // Конвертация цены в рубли
+  const priceInRubles = (product.price * 90).toFixed(0);
+  
   // Get similar products (same category but not the current product)
   const similarProducts = products
     .filter(
@@ -82,7 +84,7 @@ const ProductDetail = () => {
         className="mb-6 -ml-3"
         onClick={() => navigate(-1)}
       >
-        <ArrowLeft size={18} className="mr-2" /> Back
+        <ArrowLeft size={18} className="mr-2" /> Назад
       </Button>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -128,7 +130,7 @@ const ProductDetail = () => {
                 ))}
               </div>
               <span className="text-sm">
-                {product.rating} ({product.reviews.length} reviews)
+                {product.rating} ({product.reviews.length} отзывов)
               </span>
             </div>
           </motion.div>
@@ -138,7 +140,7 @@ const ProductDetail = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <p className="text-xl font-semibold">${product.price.toFixed(2)}</p>
+            <p className="text-xl font-semibold">{priceInRubles} ₽</p>
           </motion.div>
           
           <motion.div
@@ -157,11 +159,11 @@ const ProductDetail = () => {
           >
             {product.inStock ? (
               <span className="inline-block px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded">
-                In Stock
+                В наличии
               </span>
             ) : (
               <span className="inline-block px-2 py-1 text-xs font-medium bg-red-100 text-red-800 rounded">
-                Out of Stock
+                Нет в наличии
               </span>
             )}
           </motion.div>
@@ -209,7 +211,7 @@ const ProductDetail = () => {
                       exit={{ opacity: 0, y: -10 }}
                       className="flex items-center"
                     >
-                      <Check size={18} className="mr-2" /> Added to Cart
+                      <Check size={18} className="mr-2" /> Добавлено в корзину
                     </motion.span>
                   ) : (
                     <motion.span
@@ -219,7 +221,7 @@ const ProductDetail = () => {
                       exit={{ opacity: 0, y: -10 }}
                       className="flex items-center"
                     >
-                      <ShoppingBag size={18} className="mr-2" /> Add to Cart
+                      <ShoppingBag size={18} className="mr-2" /> Добавить в корзину
                     </motion.span>
                   )}
                 </AnimatePresence>
@@ -233,7 +235,7 @@ const ProductDetail = () => {
       
       {similarProducts.length > 0 && (
         <div className="pt-8">
-          <h2 className="text-2xl font-semibold mb-6">You May Also Like</h2>
+          <h2 className="text-2xl font-semibold mb-6">Вам также может понравиться</h2>
           <ProductGrid products={similarProducts} />
         </div>
       )}

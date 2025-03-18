@@ -16,9 +16,9 @@ const ProductGrid = ({ products, isLoading = false }: ProductGridProps) => {
   if (products.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center py-12">
-        <h3 className="text-xl font-medium">No products found</h3>
+        <h3 className="text-xl font-medium">Товары не найдены</h3>
         <p className="text-gray-500 mt-2">
-          Try adjusting your filters or search query
+          Попробуйте изменить фильтры или поисковый запрос
         </p>
       </div>
     );

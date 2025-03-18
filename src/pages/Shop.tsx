@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { useProducts } from "@/hooks/useProducts";
 import ProductGrid from "@/components/ProductGrid";

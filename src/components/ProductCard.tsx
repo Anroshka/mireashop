@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Product } from "@/lib/types";
@@ -28,6 +27,9 @@ const ProductCard = ({ product }: ProductCardProps) => {
     }, 1000);
   };
 
+  // Конвертация доллара в рубли
+  const priceInRubles = (product.price * 90).toFixed(0);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -54,7 +56,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
           {!product.inStock && (
             <div className="absolute top-2 left-2">
               <span className="px-2 py-1 text-xs font-medium text-white bg-black rounded">
-                Out of Stock
+                Нет в наличии
               </span>
             </div>
           )}
@@ -74,7 +76,10 @@ const ProductCard = ({ product }: ProductCardProps) => {
           <h3 className="flex-1 text-base font-medium">{product.name}</h3>
           
           <div className="flex items-center justify-between mt-auto pt-2">
-            <span className="text-base font-semibold">${product.price.toFixed(2)}</span>
+            <div className="flex flex-col">
+              <span className="text-base font-semibold">{priceInRubles} ₽</span>
+              <span className="text-xs text-gray-400">${product.price.toFixed(2)}</span>
+            </div>
             
             <Button
               variant="outline"

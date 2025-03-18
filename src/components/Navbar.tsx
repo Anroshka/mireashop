@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ShoppingBag, User, Menu, X } from "lucide-react";
@@ -17,8 +16,8 @@ const Navbar = () => {
   const isActive = (path: string) => location.pathname === path;
 
   const navLinks = [
-    { path: "/", label: "Home" },
-    { path: "/shop", label: "Shop" },
+    { path: "/", label: "Главная" },
+    { path: "/shop", label: "Магазин" },
   ];
 
   return (
@@ -29,7 +28,7 @@ const Navbar = () => {
             to="/" 
             className="text-xl font-semibold tracking-tight transition-colors"
           >
-            MINIMALIST
+            Fullstack Store
           </Link>
           <nav className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
@@ -60,7 +59,7 @@ const Navbar = () => {
                 onClick={logout}
                 className="text-sm font-medium"
               >
-                Logout
+                Выйти
               </Button>
             </div>
           ) : (
@@ -128,7 +127,7 @@ const Navbar = () => {
                   }}
                   className="justify-start text-sm font-medium p-0 h-auto"
                 >
-                  Logout
+                  Выйти
                 </Button>
               </>
             ) : (
@@ -141,7 +140,7 @@ const Navbar = () => {
                 }}
                 className="justify-start text-sm font-medium p-0 h-auto"
               >
-                Login / Register
+                Вход / Регистрация
               </Button>
             )}
           </nav>
