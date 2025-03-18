@@ -19,7 +19,7 @@ Minimalist Market - это современный интернет-магази�
 
 ```sh
 # Шаг 1: Клонировать репозиторий
-git clone https://github.com/Anroshka/minimalshop.git
+git clone https://github.com/Anroshka/mireashop.git
 
 # Шаг 2: Перейти в директорию проекта
 cd minimalshop
