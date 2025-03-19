@@ -32,7 +32,8 @@ const sortOptions = [
   { value: "newest", label: "Новинки", icon: null },
   { value: "price-asc", label: "Цена: от низкой к высокой", icon: <ArrowUpAZ size={16} /> },
   { value: "price-desc", label: "Цена: от высокой к низкой", icon: <ArrowDownAZ size={16} /> },
-  { value: "rating-desc", label: "По рейтингу", icon: <Star size={16} /> },
+  { value: "rating-asc", label: "Рейтинг: от низкого к высокому", icon: <Star size={16} /> },
+  { value: "rating-desc", label: "Рейтинг: от высокого к низкому", icon: <Star size={16} /> },
 ];
 
 const FilterSort = ({ onFilterChange, activeFilters, activeSort }: FilterSortProps) => {

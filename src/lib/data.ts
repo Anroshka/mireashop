@@ -280,6 +280,9 @@ export function getProductsByFilters(filters: {
       case "rating-desc":
         filteredProducts.sort((a, b) => b.rating - a.rating);
         break;
+      case "rating-asc":
+        filteredProducts.sort((a, b) => a.rating - b.rating);
+        break;
       default:
         break;
     }

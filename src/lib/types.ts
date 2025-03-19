@@ -1,4 +1,3 @@
-
 export interface Product {
   id: number;
   name: string;
@@ -32,7 +31,7 @@ export interface User {
   password: string;
 }
 
-export type SortOption = 'newest' | 'price-asc' | 'price-desc' | 'rating-desc';
+export type SortOption = 'newest' | 'price-asc' | 'price-desc' | 'rating-desc' | 'rating-asc';
 
 export interface FilterOptions {
   categories: string[];

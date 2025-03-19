@@ -48,10 +48,11 @@ const ProductCard = ({ product }: ProductCardProps) => {
             </div>
           )}
           <img
-            src={product.image}
+            src={product.image || 'https://images.unsplash.com/photo-1600210492493-0946911123ea?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
             alt={product.name}
             className={`object-cover w-full h-full transition-transform duration-700 ease-in-out group-hover:scale-105 ${isImageLoaded ? 'opacity-100' : 'opacity-0'}`}
             onLoad={() => setIsImageLoaded(true)}
+            onError={() => setIsImageLoaded(true)}
           />
           {!product.inStock && (
             <div className="absolute top-2 left-2">
@@ -82,9 +83,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
             </div>
             
             <Button
-              variant="outline"
-              size="sm"
-              className={`rounded-full transition-all duration-300 ${
+              className={`border border-input bg-background text-foreground hover:bg-accent hover:text-accent-foreground rounded-full h-9 px-3 transition-all duration-300 ${
                 isAddingToCart ? 'bg-black text-white' : ''
               } ${!product.inStock ? 'opacity-50 cursor-not-allowed' : ''}`}
               onClick={handleAddToCart}

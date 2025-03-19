@@ -29,7 +29,7 @@ const Index = () => {
             <p className="text-gray-500 mt-2">Откройте для себя наши самые популярные позиции</p>
           </div>
           
-          <Button asChild variant="ghost" className="mt-4 md:mt-0">
+          <Button asChild className="mt-4 md:mt-0 hover:bg-accent hover:text-accent-foreground">
             <Link to="/shop" className="group flex items-center">
               Смотреть все{" "}
               <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
@@ -145,7 +145,7 @@ const Index = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <Button asChild size="lg" variant="outline" className="bg-transparent text-white hover:bg-white hover:text-black">
+              <Button asChild className="h-11 rounded-md px-8 bg-transparent text-white border border-white hover:bg-white hover:text-black">
                 <Link to="/shop">
                   Перейти в магазин
                 </Link>
