@@ -5,6 +5,7 @@ import { useCart } from "@/hooks/useCart";
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import AuthModal from "./AuthModal";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 
 const Navbar = () => {
   const location = useLocation();
@@ -21,7 +22,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-30 w-full bg-white border-b border-gray-100 px-4 md:px-6">
+    <header className="sticky top-0 z-30 w-full bg-background border-b border-border px-4 md:px-6">
       <div className="flex items-center justify-between h-16 max-w-[1400px] mx-auto">
         <div className="flex items-center gap-6">
           <Link 
@@ -37,8 +38,8 @@ const Navbar = () => {
                 to={link.path}
                 className={`text-sm font-medium transition-colors ${
                   isActive(link.path)
-                    ? "text-black"
-                    : "text-gray-500 hover:text-black"
+                    ? "text-foreground"
+                    : "text-muted-foreground hover:text-foreground"
                 } link-hover`}
               >
                 {link.label}
@@ -48,6 +49,8 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-4">
+          <ThemeToggle />
+
           {isAuthenticated ? (
             <div className="hidden md:flex items-center gap-4">
               <span className="text-sm font-medium">
@@ -77,7 +80,7 @@ const Navbar = () => {
             <Button variant="ghost" size="icon">
               <ShoppingBag size={20} />
               {totalItems > 0 && (
-                <span className="absolute -top-1 -right-1 flex items-center justify-center w-5 h-5 text-xs font-medium text-white bg-black rounded-full">
+                <span className="absolute -top-1 -right-1 flex items-center justify-center w-5 h-5 text-xs font-medium text-primary-foreground bg-primary rounded-full">
                   {totalItems}
                 </span>
               )}
@@ -97,7 +100,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-16 inset-x-0 bg-white z-30 border-b border-gray-100 shadow-sm animate-fade-in">
+        <div className="md:hidden absolute top-16 inset-x-0 bg-background z-30 border-b border-border shadow-sm animate-fade-in">
           <nav className="flex flex-col gap-4 p-4">
             {navLinks.map((link) => (
               <Link
@@ -105,8 +108,8 @@ const Navbar = () => {
                 to={link.path}
                 className={`text-sm font-medium transition-colors ${
                   isActive(link.path)
-                    ? "text-black"
-                    : "text-gray-500 hover:text-black"
+                    ? "text-foreground"
+                    : "text-muted-foreground hover:text-foreground"
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >

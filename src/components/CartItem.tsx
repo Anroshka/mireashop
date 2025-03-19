@@ -27,10 +27,10 @@ const CartItem = ({ item }: CartItemProps) => {
       transition={{ duration: 0.3 }}
       className="flex items-start py-4 space-x-4"
     >
-      <div className="relative w-20 h-20 overflow-hidden rounded-md bg-gray-100">
+      <div className="relative w-20 h-20 overflow-hidden rounded-md bg-secondary">
         {!isImageLoaded && (
-          <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
-            <div className="w-6 h-6 border-2 border-black border-t-transparent rounded-full animate-spin"></div>
+          <div className="absolute inset-0 flex items-center justify-center bg-secondary">
+            <div className="w-6 h-6 border-2 border-primary border-t-transparent rounded-full animate-spin"></div>
           </div>
         )}
         <img
@@ -50,23 +50,19 @@ const CartItem = ({ item }: CartItemProps) => {
             {product.name}
           </Link>
           <Button
-            variant="ghost"
-            size="icon"
-            className="h-6 w-6 text-gray-500 hover:text-black"
+            className="h-6 w-6 text-muted-foreground hover:text-foreground"
             onClick={() => removeItem(product.id)}
           >
             <X size={16} />
           </Button>
         </div>
         
-        <p className="text-sm text-gray-500 mt-1">{priceInRubles} ₽</p>
+        <p className="text-sm text-muted-foreground mt-1">{priceInRubles} ₽</p>
         
         <div className="flex items-center justify-between mt-3">
-          <div className="flex items-center space-x-2 border border-gray-200 rounded-md overflow-hidden">
+          <div className="flex items-center space-x-2 border border-border rounded-md overflow-hidden">
             <Button
-              variant="ghost"
-              size="icon"
-              className="h-7 w-7 rounded-none border-r border-gray-200"
+              className="h-7 w-7 rounded-none border-r border-border"
               onClick={() => updateQuantity(product.id, quantity - 1)}
               disabled={quantity <= 1}
             >
@@ -74,9 +70,7 @@ const CartItem = ({ item }: CartItemProps) => {
             </Button>
             <span className="w-8 text-center text-sm">{quantity}</span>
             <Button
-              variant="ghost"
-              size="icon"
-              className="h-7 w-7 rounded-none border-l border-gray-200"
+              className="h-7 w-7 rounded-none border-l border-border"
               onClick={() => updateQuantity(product.id, quantity + 1)}
             >
               <Plus size={14} />

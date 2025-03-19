@@ -27,8 +27,6 @@ const Cart = () => {
         <h1 className="text-2xl font-semibold">Корзина</h1>
         {items.length > 0 && (
           <Button
-            variant="ghost"
-            size="sm"
             onClick={clearCart}
             className="text-sm"
           >
@@ -39,11 +37,11 @@ const Cart = () => {
 
       {items.length === 0 ? (
         <div className="flex flex-col items-center justify-center py-16 space-y-4">
-          <div className="p-4 bg-gray-100 rounded-full">
-            <ShoppingBag size={32} className="text-gray-400" />
+          <div className="p-4 bg-secondary rounded-full">
+            <ShoppingBag size={32} className="text-muted-foreground" />
           </div>
           <h2 className="text-xl font-medium">Ваша корзина пуста</h2>
-          <p className="text-gray-500 text-center max-w-md">
+          <p className="text-muted-foreground text-center max-w-md">
             Похоже, вы еще ничего не добавили в корзину.
           </p>
           <Button asChild className="mt-4">
@@ -62,7 +60,7 @@ const Cart = () => {
                   exit={{ opacity: 0, height: 0, marginBottom: 0 }}
                 >
                   <CartItem item={item} />
-                  <hr className="border-gray-100" />
+                  <hr className="border-border" />
                 </motion.div>
               ))}
             </AnimatePresence>
@@ -72,26 +70,26 @@ const Cart = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="bg-gray-50 p-6 rounded-lg space-y-4"
+              className="bg-card p-6 rounded-lg space-y-4"
             >
               <h2 className="text-lg font-medium">Итог заказа</h2>
               
               <div className="space-y-2">
                 <div className="flex justify-between">
-                  <span className="text-gray-500">Товары ({totalItems})</span>
+                  <span className="text-muted-foreground">Товары ({totalItems})</span>
                   <span>{totalPriceInRubles} ₽</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-500">Доставка</span>
+                  <span className="text-muted-foreground">Доставка</span>
                   <span>Бесплатно</span>
                 </div>
-                <div className="pt-2 border-t border-gray-200 flex justify-between font-medium">
+                <div className="pt-2 border-t border-border flex justify-between font-medium">
                   <span>Итого</span>
                   <span>{totalPriceInRubles} ₽</span>
                 </div>
               </div>
 
-              <div className="flex items-center p-3 bg-gray-100 rounded text-xs">
+              <div className="flex items-center p-3 bg-secondary rounded text-xs">
                 <AlertCircle size={14} className="mr-2 flex-shrink-0" />
                 <p>Это демо-магазин. Реальные платежи не обрабатываются.</p>
               </div>
